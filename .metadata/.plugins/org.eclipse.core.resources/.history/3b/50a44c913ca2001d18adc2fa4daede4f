@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/header::head('환영합니다')}"></head>
+<body>
+
+	<!-- thymeleaf 속성은 th:으로 시작한다. -->
+
+	<!-- Link URL Expression : @{} -->
+	<a th:href="@{/blog/list}">블로그</a>
+
+</body>
+</html>

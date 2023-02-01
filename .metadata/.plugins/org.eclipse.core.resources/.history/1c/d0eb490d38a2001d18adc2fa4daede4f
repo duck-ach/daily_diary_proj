@@ -1,0 +1,5 @@
+package com.heera.proj01.config;
+
+public class DBConfig {
+
+}

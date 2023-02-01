@@ -1,0 +1,10 @@
+package com.heera.proj01.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@EnableTransactionManagement // Transaction Manager를 허용하는 애너테이션
+@Configuration
+public class DBConfig {
+
+}
