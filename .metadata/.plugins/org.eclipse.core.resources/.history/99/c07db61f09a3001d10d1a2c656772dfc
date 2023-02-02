@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/header::head('환영합니다 공주님 왕자님! ㅋㅋ')}"></head>
+<body>
+
+	<!-- link 이동을 위한 thymeleaf 속성은 @로 시작한다. -->
+	<div>
+		<a th:href="@{user/login}">로그인</a> / <a href="@{user/join}">회원가입</a>
+	</div>
+
+</body>
+</html>

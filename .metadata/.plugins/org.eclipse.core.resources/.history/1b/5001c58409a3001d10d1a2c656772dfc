@@ -10,7 +10,7 @@
 		</div>
 		<div>
 			<label>비밀번호(Password)</label>
-			<input type="password" name="pw" placeholder="비밀번호">
+			<input type="text" name="pw" placeholder="비밀번호">
 		</div>
 	</form>
 	<!-- link 이동을 위한 thymeleaf 속성은 @로 시작한다. -->

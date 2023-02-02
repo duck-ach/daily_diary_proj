@@ -199,4 +199,5 @@
   <uri name="http://www.w3.org/TR/xmldsig-core/xmldsig-core-schema.xsd" uri="jar:file:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wst.standard.schemas_1.0.800.v201901071922.jar!/xsd/xmldsig-core-schema.xsd"/>
   <system systemId="http://www.w3.org/2001/xml.xsd" uri="jar:file:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.xsd_2.18.0.v20220925-0948.jar!/cache/www.w3.org/2001/xml.xsd"/>
   <uri name="http://www.w3.org/2001/XMLSchema" uri="jar:file:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.xsd_2.18.0.v20220925-0948.jar!/cache/www.w3.org/2001/XMLSchema.xsd"/>
+  <uri id="org.w3c.xinclude" name="http://www.w3.org/2001/XInclude" uri="jar:file:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.eclipse.wst.xsl.core_1.2.100.v201907231732.jar!/xslt-schemas/xinclude.xsd"/>
 </catalog>

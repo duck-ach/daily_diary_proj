@@ -6,11 +6,11 @@
 	<form>
 		<div>
 			<label>아이디(ID)</label>
-			<input type="text" name="id" placeholder="아이디">
+			<input type="text" name="id" placeholder="ID">
 		</div>
 		<div>
 			<label>비밀번호(Password)</label>
-			<input type="password" name="pw" placeholder="비밀번호">
+			<input type="text" name="id" placeholder="ID">
 		</div>
 	</form>
 	<!-- link 이동을 위한 thymeleaf 속성은 @로 시작한다. -->

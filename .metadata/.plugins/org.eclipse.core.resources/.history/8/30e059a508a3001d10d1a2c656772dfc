@@ -11,6 +11,10 @@
 </head>
 <body>
 	<div th:fragment="body_title">
-		<h1>Daily Diary</h1>
+		<h1>일기장</h1>
+	</div>
+	<div>
+		<div><a href="/">로그인</a></div>
+		<div><a href="/">회원가입</a></div>
 	</div>
 <hr>

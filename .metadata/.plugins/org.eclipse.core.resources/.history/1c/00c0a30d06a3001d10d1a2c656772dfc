@@ -7,10 +7,14 @@
 <head th:fragment="head(title)">
 <meta charset="UTF-8">
 <title th:text="${title}"></title>
-<script th:src="@{/js/jquery-3.6.1.min.js}"></script>
 </head>
 <body>
 	<div th:fragment="body_title">
-		<h1>Daily Diary</h1>
+		<h1>Welcome To My BLOG</h1>
+		<hr>
 	</div>
-<hr>
+	<div>
+		<div><a href="/">로그인</a></div>
+	</div>
+</body>
+</html>
