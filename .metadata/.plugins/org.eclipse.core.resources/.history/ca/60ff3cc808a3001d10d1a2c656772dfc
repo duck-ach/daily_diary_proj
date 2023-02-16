@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{layout/header::head('환영합니다 공주님 왕자님! ㅋㅋ')}"></head>
-<body>
-
-	<a th:href=""></a>
-
-</body>
-</html>

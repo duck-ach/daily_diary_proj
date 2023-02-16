@@ -63,4 +63,3 @@
 
 ### 다이어리 게시판
 <img width="1012" alt="image" src="https://user-images.githubusercontent.com/101095613/216819087-71060fb6-f963-4a32-b8eb-242937658471.png">
-
