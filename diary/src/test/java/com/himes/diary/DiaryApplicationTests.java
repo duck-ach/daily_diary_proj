@@ -1,10 +1,10 @@
-package com.heera.proj01;
+package com.himes.diary;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Proj01ApplicationTests {
+class DiaryApplicationTests {
 
 	@Test
 	void contextLoads() {

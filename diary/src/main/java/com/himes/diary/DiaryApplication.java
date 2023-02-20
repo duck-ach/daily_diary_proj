@@ -1,13 +1,13 @@
-package com.heera.proj01;
+package com.himes.diary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Proj01Application {
+public class DiaryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Proj01Application.class, args);
+		SpringApplication.run(DiaryApplication.class, args);
 	}
 
 }

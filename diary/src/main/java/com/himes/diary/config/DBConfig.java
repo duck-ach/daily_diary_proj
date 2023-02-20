@@ -1,4 +1,4 @@
-package com.heera.proj01.config;
+package com.himes.diary.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.TransactionManager;
@@ -16,8 +17,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-@MapperScan(basePackages = {"com.heera.proj01.mapper"})
-
+@MapperScan(basePackages = {"com.himes.diary.mapper"})
+@PropertySource(value = {"classpath:application.yml"})
 @EnableAspectJAutoProxy 
 // Aspect를 자동으로 동작시키는 애너테이션
 

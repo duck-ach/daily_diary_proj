@@ -1,0 +1,40 @@
+# server port
+# web.xml
+
+server:
+  port: 9090
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+# session(1800 seconds = 30 minutes)
+    session:
+      timeout: 1800
+
+# database connection
+spring:
+  datasource:
+    hikari:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://localhost:3306/team?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+      username: root
+      password: 11111111
+
+# email
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: djagmlfk92@gmail.com
+    password: rjccfgzvkjvnnrck
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            
+# mybatis
+mybatis:
+  config-location: mybatis/config/mybatis-config.xml
+  mapper-locations: mybatis/mapper/*.xml
