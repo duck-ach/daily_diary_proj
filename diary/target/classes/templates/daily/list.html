@@ -3,32 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+<link rel="stylesheet" th:href="@{/css/diary/list.css}">
 <script th:src="@{/js/jquery-3.6.1.min.js}"></script>
 </head>
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
-	<h4>데일리 Diary에 오신 것을 환영합니다!</h4>
-
-	<table border=1>
-		<thead>
-			<tr>
-				<td>번호</td>
-				<td>제목</td>
-				<td>작성자</td>
-				<td>작성일</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr th:each="daily: ${dailies}">
-				<td th:text="${daily.dNo}"></td>
-				<td><a th:href="@{/daily/detail?dNo=} + ${daily.dNo}" th:text="${daily.dTitle}"></a></td>
-				<td th:text="${daily.userNo}"></td>
-				<td th:text="${#dates.format(daily.dDate, 'yyyy-MM-dd')}"></td>
-			</tr>
-		</tbody>
-	</table>
-	<hr/>
-	<input type="button" id="write" value="작성">
+	<nav th:replace="~{layout/navBar.html::navigation}"></nav>
+	<div class="diary_container">
+		<div class="diary_top_banner">
+			<h4>데일리 Diary에 오신 것을 환영합니다!</h4>
+		</div>
+		<table border=1>
+			<thead>
+				<tr>
+					<td>번호</td>
+					<td>제목</td>
+					<td>작성자</td>
+					<td>작성일</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="daily: ${dailies}">
+					<td th:text="${daily.dNo}"></td>
+					<td><a th:href="@{/daily/detail?dNo=} + ${daily.dNo}" th:text="${daily.dTitle}"></a></td>
+					<td th:text="${daily.userNo}"></td>
+					<td th:text="${#dates.format(daily.dDate, 'yyyy-MM-dd')}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr/>
+		<input type="button" id="write" value="작성">
+	</div>
 	<script>
 		$('#write').click(function(){
 			location.href="/daily/write";

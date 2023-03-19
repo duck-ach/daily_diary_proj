@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+body {
+	margin-left: 120px;
+}
+
+a {
+	color: inherit;
+}
+
+nav {
+	position: fixed;
+	top: 0;	left: 0;
+	background-color: purple;
+	color: #fff;
+	width: 120px;
+	height: 100%;
+	border-radius: 20px;
+}
+.nav_container {
+	text-align: center;
+}
+.nav_logo {
+	margin-top: 60px;
+}
+.nav_contents {
+	margin-top: 100px;
+}
+.nav_content {
+	padding: 10px;
+}

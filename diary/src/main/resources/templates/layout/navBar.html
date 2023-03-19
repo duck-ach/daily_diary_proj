@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/nav.css}">
+</head>
+<body>
+	<nav th:fragment="navigation">
+		<div class="nav_container">
+			<div class="nav_logo">
+				로고 위치지롱!
+			</div>
+			<div class="nav_contents">
+				<div class="nav_content">
+					<a th:href="@{/daily}"><i class="fa-solid fa-book"></i></a>
+				</div>
+				<div class="nav_content"><i class="fa-brands fa-twitter"></i></div>
+				<div class="nav_content">1</div>
+				<div class="nav_content">1</div>
+				<div class="nav_content">1</div>
+				<div class="nav_content">1</div>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>
