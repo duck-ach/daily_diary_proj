@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script th:src="@{/js/jquery-3.6.1.min.js}"></script>
+<script th:src="@{/js/diary/daily.js}"></script>
 </head>
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
@@ -25,6 +27,7 @@
 			</tbody>
 		</table>
 		<button>저장</button>
+		<input type="button" id="list" value="목록">
 	</form>
 </body>
 </html>

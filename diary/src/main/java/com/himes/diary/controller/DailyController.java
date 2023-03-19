@@ -21,6 +21,12 @@ public class DailyController {
 		return "daily/list";
 	}
 	
+	@GetMapping("/daily/detail")
+	public String getDaily(Model model, int dNo) {
+		model.addAttribute("daily", dailyService.getDaily(dNo));
+		return "daily/detail";
+	}
+	
 	@GetMapping("/daily/write")
 	public String dailyWriteForm() {
 		return "daily/write";

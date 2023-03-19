@@ -3,9 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" th:href="@{/css/user/mypage.css}">
 <script th:src="@{/js/jquery-3.6.1.min.js}"></script>
-<script th:src="@{/js/moment-with-locales.js}"></script>
 </head>
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
@@ -23,7 +21,7 @@
 		<tbody>
 			<tr th:each="daily: ${dailies}">
 				<td th:text="${daily.dNo}"></td>
-				<td th:text="${daily.dTitle}"></td>
+				<td><a th:href="@{/daily/detail?dNo=} + ${daily.dNo}" th:text="${daily.dTitle}"></a></td>
 				<td th:text="${daily.userNo}"></td>
 				<td th:text="${#dates.format(daily.dDate, 'yyyy-MM-dd')}"></td>
 			</tr>

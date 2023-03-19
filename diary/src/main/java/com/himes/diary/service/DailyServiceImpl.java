@@ -23,6 +23,13 @@ public class DailyServiceImpl implements DailyService {
 	}
 	
 	@Override
+	public DailyDTO getDaily(int dNo) {
+		DailyDTO daily = new DailyDTO();
+		daily = dailyMapper.selectDaily(dNo);
+		return daily;
+	}
+	
+	@Override
 	public void createDaily(DailyDTO dto) {
 		dailyMapper.insertDaily(dto);
 	}

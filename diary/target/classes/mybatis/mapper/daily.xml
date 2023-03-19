@@ -10,6 +10,12 @@
 		FROM DAILY_BOARD
 	</select>
 
+	<select id="selectDaily" resultType="DailyDTO" parameterType="int">
+		SELECT D_NO, USER_NO, D_TITLE, D_CONT, D_DATE, D_MODY_DATE, D_HIT
+		FROM DAILY_BOARD
+		WHERE D_NO = #{dNo}
+	</select>
+
 	<insert id="insertDaily" parameterType="DailyDTO">
 		INSERT INTO DAILY_BOARD
 			(USER_NO, D_TITLE, D_CONT, D_DATE, D_MODY_DATE, D_HIT)

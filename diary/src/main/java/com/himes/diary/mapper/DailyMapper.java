@@ -9,5 +9,6 @@ import com.himes.diary.domain.DailyDTO;
 @Mapper
 public interface DailyMapper {
 	public List<DailyDTO> selectDailies();
+	public DailyDTO selectDaily(int dNo);
 	public int insertDaily(DailyDTO dto);
 }
