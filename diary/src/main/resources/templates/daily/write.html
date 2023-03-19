@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:replace="~{layout/header.html::body_title}"></div>
+	<h4>Daily 작성화면</h4>
+	<form th:action="@{/daily/add}" method="post">
+		<table border=1>
+			<tbody>
+				<tr>
+					<td>제목</td>
+					<td>
+						<input type="text" name="dTitle">
+					</td>
+				</tr>
+				<tr>
+					<td>내용</td>
+					<td>
+						<input type="text" name="dCont">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button>저장</button>
+	</form>
+</body>
+</html>
