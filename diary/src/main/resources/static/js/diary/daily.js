@@ -1,6 +1,6 @@
 // 목록으로 이동
 $(function(){
-	fn_goList();	
+	fn_goList();
 })
 
 function fn_goList(){

@@ -9,16 +9,16 @@
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
 	데일리 뿌잉!
-	<form th:action="@{/daily/remove}" method="post">
+	<form th:action="@{/daily/edit}" method="post">
 		<table border=1>
 			<tbody>
 				<tr>
 					<td>글 순번</td>
-					<td><input type="text" name="dNo" th:value="${daily.dNo}" id="dNo" readonly></td>
+					<td><input type="text" name=dNo th:value="${daily.dNo}" readonly></td>
 				</tr>
 				<tr>
 					<td>글 제목</td>
-					<td><input type="text" name="dTitle" th:value="${daily.dTitle}" readonly> </td>
+					<td><input type="text" name="dTitle" th:value="${daily.dTitle}"> </td>
 				</tr>
 				<tr>
 					<td>글 작성자</td>
@@ -30,18 +30,12 @@
 				</tr>
 				<tr>
 					<td>글 내용</td>
-					<td><input type="text" name="dCont" th:value="${daily.dCont}" readonly></td>
+					<td><input type="text" name="dCont" th:value="${daily.dCont}"></td>
 				</tr>
 			</tbody>
 		</table>
-		<input type="button" value="수정" id="edit">
-		<button>삭제</button>
+		<button>저장</button>
 		<input type="button" value="목록" id="list">
 	</form>
-	<script>
-		$('#edit').click(function(){
-			location.href="/daily/editForm?dNo=" + $('#dNo').val();
-		})	
-	</script>
 </body>
 </html>

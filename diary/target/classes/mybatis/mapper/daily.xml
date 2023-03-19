@@ -7,13 +7,13 @@
 <mapper namespace="com.himes.diary.mapper.DailyMapper">
 	<select id="selectDailies" resultType="DailyDTO">
 		SELECT D_NO, USER_NO, D_TITLE, D_CONT, D_DATE, D_MODY_DATE, D_HIT
-		FROM DAILY_BOARD
+		  FROM DAILY_BOARD
 	</select>
 
 	<select id="selectDaily" resultType="DailyDTO" parameterType="int">
 		SELECT D_NO, USER_NO, D_TITLE, D_CONT, D_DATE, D_MODY_DATE, D_HIT
-		FROM DAILY_BOARD
-		WHERE D_NO = #{dNo}
+		  FROM DAILY_BOARD
+		 WHERE D_NO = #{dNo}
 	</select>
 
 	<insert id="insertDaily" parameterType="DailyDTO">
@@ -23,8 +23,16 @@
 			(1, #{dTitle}, #{dCont}, NOW(), NOW(), 0)
 	</insert>
 	
+	<update id="updateDaily" parameterType="DailyDTO">
+		UPDATE DAILY_BOARD
+		   SET D_TITLE = #{dTitle},
+		   	   D_CONT = #{dCont},
+		   	   D_MODY_DATE = NOW()
+		 WHERE D_NO = #{dNo}
+	</update>
+	
 	<delete id="deleteDaily" parameterType="int">
 		DELETE FROM DAILY_BOARD
-		WHERE D_NO = #{dNo}
+		 WHERE D_NO = #{dNo}
 	</delete>
 </mapper>

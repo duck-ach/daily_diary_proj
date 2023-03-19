@@ -35,6 +35,11 @@ public class DailyServiceImpl implements DailyService {
 	}
 	
 	@Override
+	public void updateDaily(DailyDTO dto) {
+		dailyMapper.updateDaily(dto);
+	}
+	
+	@Override
 	public void deleteDaily(int dNo) {
 		dailyMapper.deleteDaily(dNo);
 	}

@@ -11,5 +11,6 @@ public interface DailyMapper {
 	public List<DailyDTO> selectDailies();
 	public DailyDTO selectDaily(int dNo);
 	public int insertDaily(DailyDTO dto);
+	public int updateDaily(DailyDTO dto);
 	public int deleteDaily(int dNo);
 }

@@ -14,11 +14,11 @@
 			<tbody>
 				<tr>
 					<td>글 순번</td>
-					<td th:text="${daily.dNo}"></td>
+					<td><input type="text" name="dNo" th:value="${daily.dNo}" id="dNo" readonly></td>
 				</tr>
 				<tr>
 					<td>글 제목</td>
-					<td th:text="${daily.dTitle}"></td>
+					<td><input type="text" name="dTitle" th:value="${daily.dTitle}" readonly> </td>
 				</tr>
 				<tr>
 					<td>글 작성자</td>
@@ -30,13 +30,18 @@
 				</tr>
 				<tr>
 					<td>글 내용</td>
-					<td th:text="${daily.dCont}"></td>
+					<td><input type="text" name="dCont" th:value="${daily.dCont}" readonly></td>
 				</tr>
 			</tbody>
 		</table>
-		<input type="hidden" name="dNo" th:value="${daily.dNo}">
+		<input type="button" value="수정" id="edit">
 		<button>삭제</button>
 		<input type="button" value="목록" id="list">
 	</form>
+	<script>
+		$('#edit').click(function(){
+			location.href="/daily/editForm?dNo=" + $('#dNo').val();
+		})	
+	</script>
 </body>
 </html>

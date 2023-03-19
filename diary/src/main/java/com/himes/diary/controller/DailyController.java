@@ -39,6 +39,18 @@ public class DailyController {
 		return "redirect:/daily";
 	}
 	
+	@GetMapping("/daily/editForm")
+	public String goUpdateDailyForm(Model model, int dNo) {
+		model.addAttribute("daily", dailyService.getDaily(dNo));
+		return "daily/edit";
+	}
+	
+	@PostMapping("/daily/edit")
+	public String updateDaily(DailyDTO dto) {
+		dailyService.updateDaily(dto);
+		return "redirect:/daily";
+	}
+	
 	@PostMapping("/daily/remove")
 	public String deleteDaily(int dNo) {
 		dailyService.deleteDaily(dNo);
