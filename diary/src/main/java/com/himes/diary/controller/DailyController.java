@@ -38,4 +38,10 @@ public class DailyController {
 		dailyService.createDaily(dto);
 		return "redirect:/daily";
 	}
+	
+	@PostMapping("/daily/remove")
+	public String deleteDaily(int dNo) {
+		dailyService.deleteDaily(dNo);
+		return "redirect:/daily";
+	}
 }

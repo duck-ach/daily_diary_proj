@@ -8,4 +8,5 @@ public interface DailyService {
 	public List<DailyDTO> getDailies();
 	public DailyDTO getDaily(int dNo);
 	public void createDaily(DailyDTO dto);
+	public void deleteDaily(int dNo);
 }

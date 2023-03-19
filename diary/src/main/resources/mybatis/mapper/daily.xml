@@ -22,4 +22,9 @@
 		VALUES
 			(1, #{dTitle}, #{dCont}, NOW(), NOW(), 0)
 	</insert>
+	
+	<delete id="deleteDaily" parameterType="int">
+		DELETE FROM DAILY_BOARD
+		WHERE D_NO = #{dNo}
+	</delete>
 </mapper>

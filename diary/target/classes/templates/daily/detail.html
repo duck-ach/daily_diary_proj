@@ -9,30 +9,34 @@
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
 	데일리 뿌잉!
-	<table border=1>
-		<tbody>
-			<tr>
-				<td>글 순번</td>
-				<td th:text="${daily.dNo}"></td>
-			</tr>
-			<tr>
-				<td>글 제목</td>
-				<td th:text="${daily.dTitle}"></td>
-			</tr>
-			<tr>
-				<td>글 작성자</td>
-				<td th:text="${daily.userNo}"></td>
-			</tr>
-			<tr>
-				<td>글 작성일</td>
-				<td th:text="${#dates.format(daily.dDate, 'yyyy-MM-dd')}"></td>
-			</tr>
-			<tr>
-				<td>글 내용</td>
-				<td th:text="${daily.dCont}"></td>
-			</tr>
-		</tbody>
-	</table>
-	<input type="button" value="목록" id="list">
+	<form th:action="@{/daily/remove}" method="post">
+		<table border=1>
+			<tbody>
+				<tr>
+					<td>글 순번</td>
+					<td th:text="${daily.dNo}"></td>
+				</tr>
+				<tr>
+					<td>글 제목</td>
+					<td th:text="${daily.dTitle}"></td>
+				</tr>
+				<tr>
+					<td>글 작성자</td>
+					<td th:text="${daily.userNo}"></td>
+				</tr>
+				<tr>
+					<td>글 작성일</td>
+					<td th:text="${#dates.format(daily.dDate, 'yyyy-MM-dd')}"></td>
+				</tr>
+				<tr>
+					<td>글 내용</td>
+					<td th:text="${daily.dCont}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="hidden" name="dNo" th:value="${daily.dNo}">
+		<button>삭제</button>
+		<input type="button" value="목록" id="list">
+	</form>
 </body>
 </html>
