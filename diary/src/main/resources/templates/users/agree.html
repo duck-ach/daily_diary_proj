@@ -4,12 +4,57 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" th:href="@{/css/nav.css}">
 <link rel="stylesheet" th:href="@{/css/diary/list.css}">
+<script src="../../static/js/jquery-3.6.1.min.js"></script>
+<script>
+	$(function(){
+		
+	});
+</script>
 </head>
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
 	<nav th:replace="~{layout/navBar.html::navigation}"></nav>
 	<div>
-		
+		<form th:action="@{users/agreed}" method="get">
+			<div>
+				<h3>이용약관</h3>
+				<div class="agree_box">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim modi in
+			      	exercitationem explicabo, at rem officia autem non porro soluta dolorum
+			      	officiis ipsa repellat, laudantium ea unde labore, temporibus quas?Lorem
+			      	ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eius totam
+			      	quam pariatur ratione, in voluptatem dignissimos laboriosam sint aut!
+			      	Repudiandae consectetur odit quo corrupti quidem perferendis aut dolores
+			      	quis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam
+			      	optio dolore recusandae fuga voluptatibus. Ea quam deserunt consectetur
+			      	quo aut eligendi, molestiae incidunt molestias ullam? Repellendus ratione
+			      	repellat
+				</div>
+				<input type="checkbox" id="use_agree" class="chk_agree">
+				<label for="use_agree"> 위의 이용약관에 동의합니다.</label>
+				
+				<h3>개인정보 수집 및 이용에 대한 안내</h3>
+				<div class="agree_box">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim modi in
+			      	exercitationem explicabo, at rem officia autem non porro soluta dolorum
+			      	officiis ipsa repellat, laudantium ea unde labore, temporibus quas?Lorem
+			      	ipsum dolor sit amet, consectetur adipisicing elit. Eveniet eius totam
+			      	quam pariatur ratione, in voluptatem dignissimos laboriosam sint aut!
+			      	Repudiandae consectetur odit quo corrupti quidem perferendis aut dolores
+			      	quis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nam
+			      	optio dolore recusandae fuga voluptatibus. Ea quam deserunt consectetur
+			      	quo aut eligendi, molestiae incidunt molestias ullam? Repellendus ratione
+			      	repellat
+				</div>
+				<input type="checkbox" id="info_agree" class="chk_agree">
+				<label for="info_agree"> 위의 개인정보 수집 및 이용에 대한 안내를 확인했습니다.</label>
+			</div>
+			<div>
+				<input type="checkbox" name="all_agree" id="all_agree" class="chk_agree" value="1">
+				<label for="all_agree"> 위의 약관과 내용에 대해 모두 동의합니다.</label>
+			</div>
+			<button>확인</button> <input type="button" value="취소" id="cancel">
+		</form>
 	</div>
 </body>
 </html>

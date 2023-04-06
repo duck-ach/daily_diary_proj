@@ -2,7 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="~{layout/header::head('환영합니다 공주님 왕자님! ㅋㅋ')}"></head>
 <body>
-
+	<div th:replace="~{layout/header.html::body_title}"></div>
+	<nav th:replace="~{layout/navBar.html::navigation}"></nav>
+	<div>
+		<a th:href=@{users/agree}>회원가입</a>
+	</div>
 	<div>
 		<a th:href=@{daily}>데일리로 가기</a>
 	</div>
