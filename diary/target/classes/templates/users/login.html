@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/header::head('로그인페이지')}">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../static/css/users/login.css">
+</head>
+<body>
+    <div class="all_wrap"> <!-- action은 hidden값으로 pwd 넘겨주면 링크형식 아니어도 됨 -->
+        <form method="post" action="https://tomcat2.test.co.kr/pkmslogin.form">
+            <div class="login_frm_wrap">
+                <div id="login_title">LOGIN</div>
+                <div class="login_input_wrap1"> 
+                    <label for="username">ID </label>
+                    <input type="text" name="username" id="username" placeholder="아이디">
+                </div>
+                <div class="login_input_wrap2">
+                    <label for="password">비밀번호 </label>
+                    <input type="password" name="password" id="password" placeholder="비밀번호">
+                </div>
+                <button class="buttons">로그인</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
