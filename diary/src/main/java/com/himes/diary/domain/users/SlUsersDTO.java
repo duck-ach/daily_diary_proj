@@ -1,4 +1,4 @@
-package com.himes.diary.domain;
+package com.himes.diary.domain.users;
 
 import java.sql.Date;
 
@@ -7,13 +7,16 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * 휴면 회원정보 DTO
+ * */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UsersDTO {
+public class SlUsersDTO {
 	
-	private int userNo;
+	private int slUserNo;
 	private String userId;
 	private String UserPw;
 	private String name;
@@ -25,10 +28,7 @@ public class UsersDTO {
 	private int agreeCode;
 	private String snsType;
 	private Date joinDate;
-	private String ssId;
-	private Date ssLimitDate;
-	private String ip;
-	private Date pwModifyDate;
-	
+	private Date slDate;
+	private String ip;	
 	
 }
