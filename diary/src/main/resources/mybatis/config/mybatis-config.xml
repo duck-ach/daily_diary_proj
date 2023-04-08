@@ -11,7 +11,7 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.himes.diary.domain.UsersDTO" alias="UsersDTO" />
+		<typeAlias type="com.himes.diary.domain.users.UsersDTO" alias="UsersDTO" />
 		<typeAlias type="com.himes.diary.domain.DailyDTO" alias="DailyDTO" />
 	</typeAliases>
 
