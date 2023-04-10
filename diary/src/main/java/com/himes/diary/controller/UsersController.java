@@ -2,7 +2,6 @@ package com.himes.diary.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UsersController {
@@ -12,7 +11,7 @@ public class UsersController {
 		return "users/agree";
 	}
 	
-	@PostMapping("/users/agreed")
+	@GetMapping("/users/agreed")
 	public String agreed() {
 		return "users/login";
 	}

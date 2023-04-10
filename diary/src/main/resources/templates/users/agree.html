@@ -14,6 +14,56 @@
 <body>
 	<div th:replace="~{layout/header.html::body_title}"></div>
 	<nav th:replace="~{layout/navBar.html::navigation}"></nav>
+	<script>
+		$(function(){
+			fn_check_all();
+			fn_cancel();
+			fn_submit();
+		});
+		
+		function fn_check_all() {
+
+			// 전체 동의 체크박스 클릭 시
+			$('#all_agree').click(function(){
+				if($(this).is(':checked')){
+					$('.chk_agree').prop('checked', true);
+				} else {
+					$('.chk_agree').prop('checked', false);
+				}
+			})
+			
+			// 모든 개별 체크 체크시 전체동의 체크
+			var list = $('input[type=checkbox]').not('#all_agree');
+			$(list).click(function(){
+				// 개별 체크박스 체크된 개수 얻어오기
+				size = list.filter(':checked').length;
+				
+				if(size == list.length) {
+					$('#all_agree').prop('checked', true);
+				} else {
+					$('#all_agree').prop('checked', false);
+				}
+			});
+			
+		}
+		
+		function fn_cancel(){
+			$('#cancel').click(function(){
+				history.back();
+			});
+		}
+		
+		function fn_submit(){
+			// submit 시 체크박스 체크여부 확인
+			$('form').submit(function(event){
+				if(!$('#all_agree').prop('checked')) {
+					event.preventDefault();
+					alert('다음으로 넘어가기 위해서는 동의란의 동의가 필요합니다.')
+				}
+			});
+		}
+			
+	</script>
 	<div>
 		<form th:action="@{users/agreed}" method="get">
 			<div>
@@ -30,7 +80,7 @@
 			      	quo aut eligendi, molestiae incidunt molestias ullam? Repellendus ratione
 			      	repellat
 				</div>
-				<input type="checkbox" id="use_agree" class="chk_agree">
+				<input type="checkbox" id="use_agree" name="chk_agree" class="chk_agree">
 				<label for="use_agree"> 위의 이용약관에 동의합니다.</label>
 				
 				<h3>개인정보 수집 및 이용에 대한 안내</h3>
@@ -46,7 +96,7 @@
 			      	quo aut eligendi, molestiae incidunt molestias ullam? Repellendus ratione
 			      	repellat
 				</div>
-				<input type="checkbox" id="info_agree" class="chk_agree">
+				<input type="checkbox" id="info_agree" name="chk_agree" class="chk_agree">
 				<label for="info_agree"> 위의 개인정보 수집 및 이용에 대한 안내를 확인했습니다.</label>
 			</div>
 			<div>
